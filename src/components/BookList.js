@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import { ThemeContext } from '../contexts/themeContext';
 import { BookContext } from '../contexts/bookContext';
 import AddBook from './AddBook';
@@ -10,6 +10,13 @@ const BookList = () => {
     const { books, dispatch } = useContext(BookContext);
     const typeTheme = theme.isLightTheme ? theme.light : theme.dark;
     const [idHover, setHover] = useState(null);
+
+    const inputRef = useRef(null);
+    
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [books])
+
     return (
         <div className="book-list" style={{ background: typeTheme.bg, color: typeTheme.syntax }}>
             <ul>
@@ -28,7 +35,7 @@ const BookList = () => {
                     })}
                 </TransitionGroup>
 
-                <AddBook />
+                <AddBook ref= { inputRef } />
             </ul>
         </div>
     );
