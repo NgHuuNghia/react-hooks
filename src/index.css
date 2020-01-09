@@ -13,26 +13,47 @@ body {
   margin: 30px auto;
   text-align: center;
 }
-nav{
+
+nav {
   padding: 5px;
 }
+
 nav ul {
   padding: 0;
 }
+
 nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
+
 .book-list {
   padding: 20px;
   margin-bottom: 20px;
 }
-.book-list ul{
+
+.book-list ul {
   padding: 0;
   list-style-type: none;
 }
+
 .book-list li {
   padding: 10px;
   margin: 10px auto;
   border-radius: 10px;
+}
+
+/* antd */
+.notiAnimation {
+  animation-name: notiAnimate;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+} 
+@keyframes notiAnimate {
+  from {  
+    left: 0px;
+  }
+  to {
+    left: 500px;
+  }
 }
