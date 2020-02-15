@@ -18,7 +18,7 @@ const Contact = (props) => {
         <Popover
             // eslint-disable-next-line jsx-a11y/anchor-is-valid
             content={<a onClick={hide}>Close</a>}
-            title={props.title}
+            title={props.titlePopover}
             trigger="click"
             visible={visible}
             onVisibleChange={handleVisibleChange}
