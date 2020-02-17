@@ -20,9 +20,9 @@ const BookList = () => {
     }, [books])
 
     return (
-        <div className="book-list" style={{ background: typeTheme.bg, color: typeTheme.syntax }}>
+        <div className="book-list"  style={{ background: typeTheme.bg, color: typeTheme.syntax }}>
             <ul>
-                <TransitionGroup className="book-list">
+                <TransitionGroup className="book-list" data-cy="book-list">
                     {books.map(book => {
                         return (
                             <CSSTransition

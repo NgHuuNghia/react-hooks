@@ -21,7 +21,7 @@ const AddBook = ({},ref) => {
     
     return (
         <Form onSubmit={handleSubmit}>
-            <Input ref={ ref } value={title} onChange={(e) => setTitle(e.target.value)}></Input>
+            <Input data-cy="input" ref={ ref } value={title} onChange={(e) => setTitle(e.target.value)}></Input>
         </Form>
     );
 }

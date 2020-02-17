@@ -14,7 +14,7 @@ const Navbar = () => {
     const {theme} = useContext(ThemeContext);
     const typeTheme = theme.isLightTheme ? theme.light : theme.dark;
     return (
-        <nav style={{ background: typeTheme.ui, color: typeTheme.syntax }}>
+        <nav data-cy="navbar" style={{ backgroundColor: typeTheme.ui, color: typeTheme.syntax }}>
             <h1>Book App</h1>
             <h2 style={{ color: "red" }} onClick={toggleAuth}> {isAuthenticated ? 'Log In' : 'Log Out'} </h2>
             <ul>
