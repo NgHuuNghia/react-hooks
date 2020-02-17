@@ -5,6 +5,7 @@ describe('API Testing', () => {
             expect(response).to.have.property('status', 200)
             expect(response.body).to.not.null
             expect(response.body).to.have.length(100)
+            cy.writeFile('data/data.json',{...response.body},'utf8')
         })
     })
 
